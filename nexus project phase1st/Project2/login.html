@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        table th {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            margin-left: 150px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var username = document.forms["loginForm"]["un"].value;
+            var password = document.forms["loginForm"]["up"].value;
+            var errors = "";
+
+            if (username == "") {
+                errors += "Username is required.\n";
+            }
+
+            if (password == "") {
+                errors += "Password is required.\n";
+            }
+
+            if (errors !== "") {
+                alert(errors);
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="loginForm" action="login.php" method="post" onsubmit="return validateForm()">
+        <a href="nnnn.html">Sign up</a>
+        <h1>Restaurant Login</h1>
+        <table border="0">
+            <tr>
+                <th>User name:</th>
+                <td><input type="text" name="un"></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" name="up"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
